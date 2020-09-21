@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="w-full bg-white sticky top-0">
             <div className="flex lcl-container h-16 items-center">
                 <div className="pr-4 lg:w-24 flex-shrink-0">
-                    <img src="/logo-new-color.svg" className="relative h-8 z-20" alt="LCL Logo"/>
+                    <Link href="/"><a><img src="/logo-new-color.svg" className="relative h-8 z-20" alt="LCL Logo"/></a></Link>
                 </div>
                 <div className="flex-grow">
                     <div className="flex text-black items-center">

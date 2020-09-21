@@ -55,6 +55,11 @@ b {
     color: #fff;
 }
 
+.lcl-grad-1-sideways{
+    background: linear-gradient(to right, var(--lcl-teal), var(--lcl-blue));
+    color: #fff;
+}
+
 .lcl-grad-2{
     background: linear-gradient(var(--lcl-blue), var(--lcl-red));
     color: #fff;
