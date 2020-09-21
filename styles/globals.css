@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --lcl-red: #ee4342;
+    --lcl-blue: #0b7b87;
+    --lcl-yellow: #fed87f;
+    --lcl-pink: #f78f8f;
+    --lcl-teal: #47b2aa;
+    --lcl-light-yellow: #fed87f;
+    --lcl-gray: #222222;
+}
+
+body {
+    font-family: "SF Pro";
+}
+
+b {
+    @apply font-bold;
+}
+
+.lcl-red{
+    color: var(--lcl-red);
+}
+
+.lcl-yellow{
+    color: var(--lcl-yellow);
+}
+
+.lcl-teal{
+    color: var(--lcl-teal);
+}
+
+.lcl-bg-red{
+    background-color: var(--lcl-red);
+    color: #fff;
+}
+
+.lcl-bg-gray{
+    background-color: var(--lcl-gray);
+    color: #fff;
+}
+
+.lcl-grad-1{
+    background: linear-gradient(var(--lcl-teal), var(--lcl-blue));
+    color: #fff;
+}
+
+.lcl-grad-2{
+    background: linear-gradient(var(--lcl-blue), var(--lcl-red));
+    color: #fff;
+}
+
+.lcl-container{
+    @apply px-4 mx-auto;
+}
+
+@media (min-width: 640px){
+    .lcl-container{
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px){
+    .lcl-container{
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 840px){
+    .lcl-container{
+        max-width: 800px;
+    }
+}
+
+.lcl-bold-uppercase{
+    @apply uppercase font-bold text-xs tracking-widest;
+}
+
+.lcl-rounded-rect{
+    @apply rounded-lg;
+    background-color: rgba(255,255,255,0.2);
+}
