@@ -3,7 +3,7 @@ import {ReactNode} from "react";
 export default function TwoCol({children, label, mobileLabel, className}:
     {
         children: ReactNode,
-        label: string,
+        label: string | ReactNode,
         mobileLabel?: boolean,
         className?: string
     }
@@ -19,7 +19,7 @@ export default function TwoCol({children, label, mobileLabel, className}:
                     )}
                 </div>
             </div>
-            <div className="flex-grow-1">
+            <div className="flex-grow">
                 {children}
             </div>
         </div>
