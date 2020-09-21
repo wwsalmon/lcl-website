@@ -13,9 +13,15 @@ export default function Home() {
                     <div className="md:flex">
                         <div className="md:w-1/2 md:pr-10">
                             <p className="text-3xl font-light leading-snug">Life Changing Labs is the startup accelerator and mentorship program for the <b>top 5% of university entrepreneurs worldwide.</b></p>
+                            <div className="my-6">
+                                <Link href="/apply"><a className="opacity-75 hover:opacity-100 border-b">Apply for summer '21 session</a></Link><br/>
+                                <Link href="#faqs"><a className="opacity-75 hover:opacity-100 border-b">Application FAQs</a></Link><br/>
+                                <Link href="#howitworks"><a className="opacity-75 hover:opacity-100 border-b">How the program works</a></Link><br/>
+                            </div>
                         </div>
                         <div className="md:w-1/2 mt-8 md:mt-0">
                             <img src="/img/lander1.jpg" alt="Screenshot from LCL session"/>
+                            <p className="my-6 opacity-75">Not in university yet? Start your entrepreneurial journey with <a href="https://lifechangingschool.org" className="opacity-75 hover:opacity-100 border-b">Life Changing School.</a></p>
                         </div>
                     </div>
                 </TwoCol>
@@ -32,7 +38,7 @@ export default function Home() {
                     <hr/>
                 </div>
             </div>
-            <div className="w-full lcl-bg-red py-8">
+            <div className="w-full lcl-bg-red py-8" id="howitworks">
                 <TwoCol label="" className="mb-8">
                     <h2 className="lcl-bold-uppercase">How it works</h2>
                 </TwoCol>
@@ -51,7 +57,7 @@ export default function Home() {
                 </TwoCol>
             </div>
             <LanderCTA/>
-            <div className="w-full lcl-bg-red py-12">
+            <div className="w-full lcl-bg-red py-12" id="faqs">
                 <TwoCol label="" className="mb-8">
                     <h3 className="lcl-bold-uppercase">Application</h3>
                 </TwoCol>
