@@ -1,5 +1,10 @@
 import TwoCol from "../components/twocol";
 import LanderGrid from "../components/lander-grid";
+import LanderCTA from "../components/lander-cta";
+import Accordion from "react-robust-accordion";
+import {application} from "../content/faq.json";
+import Link from "next/link";
+
 export default function Home() {
     return (
         <>
@@ -19,7 +24,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="w-full lcl-grad-2 py-8">
-                <TwoCol label="logo">
+                <TwoCol label="logo" mobileLabel={true}>
                     <p className="text-2xl mb-8">LCL was founded at Cornell University in 2012. Since then, we've empowered over 80 startups, which have raised $20+ million and impact 500,000+ people.</p>
                     <LanderGrid/>
                 </TwoCol>
@@ -43,6 +48,23 @@ export default function Home() {
             <div className="w-full lcl-bg-gray py-8">
                 <TwoCol label="logo">
                     <h2 className="text-xl">Meet the people who are invested in your success.</h2>
+                </TwoCol>
+            </div>
+            <LanderCTA/>
+            <div className="w-full lcl-bg-red py-12">
+                <TwoCol label="" className="mb-8">
+                    <h3 className="lcl-bold-uppercase">Application</h3>
+                </TwoCol>
+                <TwoCol label="logo">
+                    {application.map(q => (
+                        <div className="lcl-faq">
+                            <Accordion label={(
+                                <div className="lcl-faq-q lcl-white-rect p-4">{q.question}</div>
+                            )}>
+                                <div className="lcl-faq-a lcl-white-rect p-4 opacity-75">{q.answer}</div>
+                            </Accordion>
+                        </div>
+                    ))}
                 </TwoCol>
             </div>
         </>

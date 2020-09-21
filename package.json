@@ -12,7 +12,8 @@
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-icons": "^3.11.0"
+    "react-icons": "^3.11.0",
+    "react-robust-accordion": "^0.3.1"
   },
   "devDependencies": {
     "@types/node": "^14.11.1",

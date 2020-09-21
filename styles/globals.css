@@ -5,7 +5,7 @@
 :root {
     --lcl-red: #ee4342;
     --lcl-blue: #0b7b87;
-    --lcl-yellow: #fed87f;
+    --lcl-yellow: #FEC336;
     --lcl-pink: #f78f8f;
     --lcl-teal: #47b2aa;
     --lcl-light-yellow: #fed87f;
@@ -42,6 +42,10 @@ b {
     color: #fff;
 }
 
+.lcl-bg-light-yellow{
+    background-color: var(--lcl-light-yellow);
+}
+
 .lcl-grad-1{
     background: linear-gradient(var(--lcl-teal), var(--lcl-blue));
     color: #fff;
@@ -49,6 +53,11 @@ b {
 
 .lcl-grad-2{
     background: linear-gradient(var(--lcl-blue), var(--lcl-red));
+    color: #fff;
+}
+
+.lcl-grad-3{
+    background: linear-gradient(var(--lcl-yellow), var(--lcl-red));
     color: #fff;
 }
 
@@ -81,4 +90,24 @@ b {
 .lcl-rounded-rect{
     @apply rounded-lg;
     background-color: rgba(255,255,255,0.2);
+}
+
+.lcl-white-rect{
+    background-color: rgba(255,255,255,0.4);
+}
+
+.lcl-faq{
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+div.lcl-faq:first-of-type .lcl-faq-q{
+    @apply rounded-t-lg;
+}
+
+div.lcl-faq:last-of-type{
+    border-bottom: none;
+}
+
+div.lcl-faq:last-of-type .lcl-faq-q, div.lcl-faq:last-of-type .lcl-faq-a{
+    @apply rounded-b-lg;
 }
