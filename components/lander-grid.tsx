@@ -13,7 +13,7 @@ export default function LanderGrid(){
     }, {
         name: "Response",
         logo: "/img/companies/response.png",
-        label: <>Graduate of <span className="font-bold lcl-teal">Y Combinator</span></>,
+        label: <>Graduate of <span className="font-bold lcl-light-yellow">Y Combinator</span></>,
     }, {
         name: "Empower Equity",
         logo: "/img/companies/empeq.png",
@@ -21,7 +21,7 @@ export default function LanderGrid(){
     }, {
         name: "Invictus BCI",
         logo: "/img/companies/invictus.png",
-        label: <>Recipient of <span className="font-bold lcl-teal">Cornell Tech Startup Award</span></>,
+        label: <>Recipient of <span className="font-bold lcl-light-yellow">Cornell Tech Startup Award</span></>,
     }];
 
     return (

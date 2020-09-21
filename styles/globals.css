@@ -12,10 +12,6 @@
     --lcl-gray: #222222;
 }
 
-body {
-    font-family: "SF Pro";
-}
-
 b {
     @apply font-bold;
 }
@@ -24,8 +20,16 @@ b {
     color: var(--lcl-red);
 }
 
+.lcl-pink{
+    color: var(--lcl-pink);
+}
+
 .lcl-yellow{
     color: var(--lcl-yellow);
+}
+
+.lcl-light-yellow{
+    color: var(--lcl-light-yellow);
 }
 
 .lcl-blue{

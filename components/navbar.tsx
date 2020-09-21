@@ -17,7 +17,7 @@ export default function Navbar() {
                 </div>
                 <div className="flex-grow">
                     <div className="flex text-black items-center">
-                        <Link href="/"><a className="font-black text-xs md:text-xl leading-none z-20">Life <br className="md:hidden"/>Changing <br className="md:hidden"/>Labs </a></Link>
+                        <Link href="/"><a className="font-black text-xs leading-none z-20">Life <br/>Changing <br/>Labs </a></Link>
                         <div className={`flex items-center ml-auto lcl-navbar-menu ${menuOpen ? "selected" : ""}`}>
                             <Link href="/about"><a className="mr-4">About</a></Link>
                             <Link href="/companies"><a className="mr-4">Companies</a></Link>

@@ -9,10 +9,10 @@ export default function Home() {
     return (
         <>
             <div className="w-full lcl-grad-1 py-8">
-                <TwoCol label="logo">
+                <TwoCol label="logo" className="py-8 border-b">
                     <div className="md:flex">
                         <div className="md:w-1/2 md:pr-10">
-                            <p className="text-3xl font-light leading-snug">Life Changing Labs is the startup accelerator and mentorship program for the <b>top 5% of university entrepreneurs worldwide.</b></p>
+                            <h1 className="font-light leading-snug" style={{fontSize: "1.7rem"}}>Life Changing Labs is the startup accelerator and mentorship program for the <b>top 5% of university entrepreneurs worldwide.</b></h1>
                             <div className="my-6">
                                 <Link href="/apply"><a className="opacity-75 hover:opacity-100 border-b">Apply for summer '21 session</a></Link><br/>
                                 <Link href="#faqs"><a className="opacity-75 hover:opacity-100 border-b">Application FAQs</a></Link><br/>
@@ -25,24 +25,21 @@ export default function Home() {
                         </div>
                     </div>
                 </TwoCol>
-                <div className="lcl-container mt-12">
-                    <hr/>
-                </div>
             </div>
             <div className="w-full lcl-grad-2 py-8">
-                <TwoCol label="logo" mobileLabel={true}>
-                    <p className="text-2xl mb-8">LCL was founded at Cornell University in 2012. Since then, we've empowered over 80 startups, which have raised $20+ million and impact 500,000+ people.</p>
+                <TwoCol label="">
+                    <h2 className="lcl-bold-uppercase">Our impact</h2>
+                </TwoCol>
+                <TwoCol label="logo" mobileLabel={true} className="pt-8 pb-16 border-b">
+                    <p className="text-xl mb-12">LCL was founded at Cornell University in 2012. Since then, we've empowered <span className="font-bold lcl-yellow">over 80 startups,</span> which have raised <span className="font-bold lcl-pink">$20+ million</span> and <span className="font-bold lcl-light-yellow">impact 500,000+ people.</span></p>
                     <LanderGrid/>
                 </TwoCol>
-                <div className="lcl-container mt-12">
-                    <hr/>
-                </div>
             </div>
             <div className="w-full lcl-bg-red py-8" id="howitworks">
                 <TwoCol label="" className="mb-8">
                     <h2 className="lcl-bold-uppercase">How it works</h2>
                 </TwoCol>
-                <TwoCol label="logo">
+                <TwoCol label="logo" className="pb-16">
                     <p className="text-xl">Each year, we select top founders for an 8-week boot camp, where we give them the skills, resources, and community they will need to accelerate their startups to match their vision.
                     <br/><br/>
                     Each summer culminates with a Demo Day, where the startups present their companies to a select panel of judges — venture capitalists, angel investors, and prominent entrepreneurs.
