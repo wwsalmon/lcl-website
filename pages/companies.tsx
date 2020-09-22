@@ -4,16 +4,16 @@ import TwoCol from "../components/twocol";
 export default function Companies() {
     return (
         <>
-            <div className="w-full lcl-grad-3-sideways">
+            <div className="w-full lcl-grad-3-sideways py-1">
                 <TwoCol label="">
                     <h1 className="text-4xl font-light mb-8 mt-16">Companies</h1>
                     <hr/>
-                    <div className="flex my-8">
+                    <div className="sm:flex my-8">
                         <div>
                             <p className="font-black text-4xl">80+</p>
                             <p className="lcl-bold-uppercase">Startups launched</p>
                         </div>
-                        <div className="sm:ml-16">
+                        <div className="sm:ml-16 mt-4 sm:mt-0">
                             <p className="font-black text-4xl">$20m+</p>
                             <p className="lcl-bold-uppercase">Funding raised</p>
                         </div>

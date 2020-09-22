@@ -16,6 +16,10 @@ b {
     @apply font-bold;
 }
 
+.opacity-25, .opacity-50, .opacity-75, .opacity-100 {
+    z-index: 5;
+}
+
 .lcl-red{
     color: var(--lcl-red);
 }

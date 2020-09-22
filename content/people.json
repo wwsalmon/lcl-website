@@ -28,5 +28,12 @@
       "label": "Senior Lecturer & Director of Engineering Enterprise Program at Cornell University",
       "headshot": "/img/uploads/john.jpg"
     }
+  ],
+  "team": [
+    {
+      "name": "Jojo Cheng",
+      "label": "Summer Accelerator Team",
+      "headshot": "/img/uploads/jojo.jpg"
+    }
   ]
 }
