@@ -1,0 +1,32 @@
+{
+  "speakers": [
+    {
+      "name": "Scott Belsky",
+      "label": "Chief Product Officer at Adobe, Best Selling Author of The Messy Middle",
+      "headshot": "/img/uploads/scott.jpg"
+    }, {
+      "name": "Danielle Strachman",
+      "label": "Founder and General Partner at 1517 Fund",
+      "headshot": "/img/uploads/danielle.jpg"
+    }, {
+      "name": "Michael Gibson",
+      "label": "Founder and General Partner at 1517 Fund",
+      "headshot": "/img/uploads/michael.jpg"
+    }
+  ],
+  "mentors": [
+    {
+      "name": "Auston Li",
+      "label": "Program Manager at Microsoft",
+      "headshot": "/img/uploads/auston.jpg"
+    }, {
+      "name": "Pam Silverstein",
+      "label": "Entrepreneur in Resident at Life Changing Labs",
+      "headshot": "/img/uploads/pam.jpg"
+    }, {
+      "name": "John Callister",
+      "label": "Senior Lecturer & Director of Engineering Enterprise Program at Cornell University",
+      "headshot": "/img/uploads/john.jpg"
+    }
+  ]
+}

@@ -3,7 +3,9 @@ import LanderGrid from "../components/lander-grid";
 import LanderCTA from "../components/lander-cta";
 import Accordion from "react-robust-accordion";
 import {application} from "../content/faq.json";
+import {speakers, mentors} from "../content/people.json";
 import Link from "next/link";
+import {FaArrowRight} from "react-icons/all";
 
 export default function Home() {
     return (
@@ -50,15 +52,48 @@ export default function Home() {
             </div>
             <div className="w-full lcl-bg-gray py-8">
                 <TwoCol label="logo">
-                    <h2 className="text-xl">Meet the people who are invested in your success.</h2>
+                    <h2 className="text-xl mb-12">Meet the people who are invested in your success.</h2>
+                    <h3 className="lcl-bold-uppercase mt-12 mb-8">Mentors</h3>
+                    <div className="grid sm:grid-cols-2 gap-6">
+                        {mentors.map(x => (
+                            <div className="lcl-rounded-rect p-4 flex items-center">
+                                <img src={x.headshot} alt={`Headshot of LCL mentor ${x.name}`} className="rounded-full w-20 mr-4"/>
+                                <div>
+                                    <h4 className="font-bold">{x.name}</h4>
+                                    <p className="opacity-50">{x.label}</p>
+                                </div>
+                            </div>
+                        ))}
+                        <Link href="/people#mentors">
+                            <a className="lcl-rounded-rect flex items-center justify-center opacity-25 hover:opacity-100 font-bold h-32">
+                                See all mentors <span className="ml-2"><FaArrowRight/></span>
+                            </a>
+                        </Link>
+                    </div>
+                    <h3 className="lcl-bold-uppercase mt-12 mb-8">Speakers</h3>
+                    <div className="grid sm:grid-cols-2 gap-6">
+                        {speakers.map(x => (
+                            <div className="lcl-rounded-rect p-4 flex items-center">
+                                <img src={x.headshot} alt={`Headshot of LCL mentor ${x.name}`} className="rounded-full w-20 mr-4"/>
+                                <div>
+                                    <h4 className="font-bold">{x.name}</h4>
+                                    <p className="opacity-50">{x.label}</p>
+                                </div>
+                            </div>
+                        ))}
+                        <Link href="/people#speakers">
+                            <a className="lcl-rounded-rect flex items-center justify-center opacity-25 hover:opacity-100 font-bold h-32">
+                                See all speakers <span className="ml-2"><FaArrowRight/></span>
+                            </a>
+                        </Link>
+                    </div>
                 </TwoCol>
             </div>
             <LanderCTA/>
             <div className="w-full lcl-bg-red py-12" id="faqs">
-                <TwoCol label="" className="mb-8">
-                    <h3 className="lcl-bold-uppercase">Application</h3>
-                </TwoCol>
                 <TwoCol label="logo">
+                    <h2 className="mb-12 text-xl">Frequently asked questions:</h2>
+                    <h3 className="lcl-bold-uppercase mb-8">Application</h3>
                     {application.map(q => (
                         <div className="lcl-faq">
                             <Accordion label={(
