@@ -60,7 +60,7 @@ export default function Home() {
                                 <img src={x.headshot} alt={`Headshot of LCL mentor ${x.name}`} className="rounded-full w-20 mr-4"/>
                                 <div>
                                     <h4 className="font-bold">{x.name}</h4>
-                                    <p className="opacity-50">{x.label}</p>
+                                    <p className="opacity-50 text-sm">{x.label}</p>
                                 </div>
                             </div>
                         ))}
@@ -77,7 +77,7 @@ export default function Home() {
                                 <img src={x.headshot} alt={`Headshot of LCL mentor ${x.name}`} className="rounded-full w-20 mr-4"/>
                                 <div>
                                     <h4 className="font-bold">{x.name}</h4>
-                                    <p className="opacity-50">{x.label}</p>
+                                    <p className="opacity-50 text-sm">{x.label}</p>
                                 </div>
                             </div>
                         ))}

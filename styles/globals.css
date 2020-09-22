@@ -74,6 +74,11 @@ b {
     color: #fff;
 }
 
+.lcl-grad-3-sideways{
+    background: linear-gradient(to right, var(--lcl-yellow), var(--lcl-red));
+    color: #fff;
+}
+
 .lcl-container{
     @apply px-4 mx-auto;
 }

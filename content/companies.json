@@ -1,0 +1,45 @@
+{
+  "years": [
+    {
+      "year": "2020",
+      "companies": [
+        {
+          "name": "QBuddy",
+          "place": "tied for 1st",
+          "descript": "QBuddy is a platform which forms meaningful friendships by introducing people together and hosting virtual events.",
+          "logo": "/img/uploads/qbuddy.jpg"
+        }, {
+          "name": "YayNay",
+          "place": "tied for 1st",
+          "descript": "YayNay revolutionizes constituent engagement, allowing congressional offices to poll and message voters quickly and effectively.",
+          "logo": "/img/uploads/yaynay.png"
+        }, {
+          "name": "currant.ai",
+          "place": "3rd",
+          "descript": "We develop mobile applications that utilize artificial intelligence and edge computing to provide driving assistance to drivers, generate driving behavior analytics, evaluate driving safety scores, and provide assessments to insurance companies.",
+          "logo": "/img/uploads/currant.png"
+        }, {
+          "name": "Veggie Cup",
+          "place": "",
+          "descript": "Veggie Cup is a start-up based in Ithaca, NY with the goal of providing college students and busy professionals with a tasty, healthy, and vegetable rich instant meal option.",
+          "logo": "/img/uploads/veggiecup.png"
+        }
+      ]
+    }, {
+      "year": "2019",
+      "companies": [
+        {
+          "name": "Invictus BCI",
+          "place": "1st",
+          "descript": "Our mission is to create an affordable neuroprosthetic that can restore near natural functionality.",
+          "logo": "/img/uploads/invictus.png"
+        }, {
+          "name": "takk",
+          "place": "2nd",
+          "descript": "takk is a modern, data-driven software solution that helps schools maximize gifts from alumni, parents, fan bases, and friends.",
+          "logo": "/img/uploads/takk.png"
+        }
+      ]
+    }
+  ]
+}

@@ -4,23 +4,23 @@ import {FaArrowRight} from "react-icons/fa";
 export default function LanderGrid(){
     const data = [{
         name: "Maidbot",
-        logo: "/img/companies/maidbot.png",
+        logo: "/img/uploads/maidbot.png",
         label: <>Raised over <span className="font-bold lcl-yellow">$5M+ in funding</span> and has 20 employees</>,
     }, {
         name: "EverSound",
-        logo: "/img/companies/eversound.png",
+        logo: "/img/uploads/eversound.png",
         label: <>Raised over <span className="font-bold lcl-yellow">$10M+ in funding</span> and has 500+ customers</>,
     }, {
         name: "Response",
-        logo: "/img/companies/response.png",
+        logo: "/img/uploads/response.png",
         label: <>Graduate of <span className="font-bold lcl-light-yellow">Y Combinator</span></>,
     }, {
         name: "Empower Equity",
-        logo: "/img/companies/empeq.png",
+        logo: "/img/uploads/empeq.png",
         label: <>Procured financing budget of <span className="font-bold lcl-yellow">over $2 billion</span></>,
     }, {
         name: "Invictus BCI",
-        logo: "/img/companies/invictus.png",
+        logo: "/img/uploads/invictus.png",
         label: <>Recipient of <span className="font-bold lcl-light-yellow">Cornell Tech Startup Award</span></>,
     }];
 
