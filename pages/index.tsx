@@ -5,7 +5,7 @@ import Accordion from "react-robust-accordion";
 import {application} from "../content/faq.json";
 import {speakers, mentors} from "../content/people.json";
 import Link from "next/link";
-import {FaArrowRight} from "react-icons/all";
+import {FaArrowRight} from "react-icons/fa";
 
 export default function Home() {
     return (

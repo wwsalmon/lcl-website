@@ -1,5 +1,5 @@
 import TwoCol from "./twocol";
-import {FaFacebookF, FaInstagram, FaYoutube} from "react-icons/fa";
+import {FaFacebook, FaInstagram, FaYoutube} from "react-icons/fa";
 
 export default function Footer(){
     return (
@@ -13,7 +13,7 @@ export default function Footer(){
                 <div>
                     contact@lifechanginglabs.com<br/>
                     <div className="flex mt-2">
-                        <a className="mr-2" href="https://www.facebook.com/cornellehub/"><FaFacebookF/></a>
+                        <a className="mr-2" href="https://www.facebook.com/cornellehub/"><FaFacebook/></a>
                         <a className="mr-2" href="https://www.instagram.com/lifechanginglabs/"><FaInstagram/></a>
                         <a className="mr-2" href="https://www.youtube.com/channel/UCm_6mSvLQAPInTAAleEHu4A"><FaYoutube/></a>
                     </div>
