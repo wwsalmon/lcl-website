@@ -1,5 +1,6 @@
 import TwoCol from "../components/twocol";
 import SEOBlock from "../components/seo-block";
+import {testimonials} from "../content/testimonials.json";
 
 export default function About(){
     const sponsors = [
@@ -46,6 +47,15 @@ export default function About(){
                 </TwoCol>
                 <TwoCol label={<>Our <br className="hidden lg:block"/>Philo<br className="hidden lg:block"/>sophy</>} className="my-12 py-12 border-t" mobileLabel={true}>
                     <p className="text-xl">We believe that the success of a company hinges on the growth of the people involved and the relationships that make up the team.</p>
+                </TwoCol>
+                <TwoCol label="logo" dark={true} className="my-12 py-12 border-t" id="testimonials">
+                    <h3 className="lcl-bold-uppercase mb-8">Hear from our founders</h3>
+                    {testimonials.map(x => (
+                        <div className="my-12">
+                            <h4 className="font-bold text-xl mb-4">{x.name} <span className="font-light">{x.class}</span></h4>
+                            <p className="leading-relaxed">{x.message}</p>
+                        </div>
+                    ))}
                 </TwoCol>
                 <TwoCol label="logo" dark={true} className="my-12 py-12 border-t" id="sponsors">
                     <h3 className="lcl-bold-uppercase mb-8">Sponsors</h3>
