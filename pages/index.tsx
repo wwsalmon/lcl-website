@@ -5,8 +5,12 @@ import {speakers, mentors} from "../content/people.json";
 import Link from "next/link";
 import {FaArrowRight} from "react-icons/fa";
 import SEOBlock from "../components/seo-block";
+import matter from "gray-matter";
+import {format} from "date-fns";
 
-export default function Home() {
+export default function Home({posts}) {
+    console.log(posts);
+
     return (
         <>
             <SEOBlock/>
@@ -85,21 +89,52 @@ export default function Home() {
                 <TwoCol label="logo" className="py-12 border-t border-b mt-12">
                     <h2 className="lcl-bold-uppercase">The latest from LCL</h2>
                     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-black mt-8">
-                        <div className="bg-white rounded-lg">
-                            <div className="w-full h-12 lcl-bg-red rounded-t-lg"></div>
-                            <div className="p-4">
-                                <span className="lcl-bold-uppercase mr-2">News</span>
-                                <span className="text-sm font-light">September 23</span>
-                                <h3 className="mt-1 font-bold leading-snug">Here is an excellent title for this blog post</h3>
-                            </div>
-                        </div>
+                        {posts && posts.map(post => (
+                            <Link href={`/blog/${post.slug}`}>
+                                <a>
+                                    <div className="bg-white rounded-lg">
+                                        <div className="w-full h-32 lcl-bg-red rounded-t-lg bg-cover bg-center" style={{
+                                            backgroundImage: `url(${post.thumbnail ? post.thumbnail : "/logo-new-white.svg"})`,
+                                        }}/>
+                                        <div className="p-4">
+                                            <span className="lcl-bold-uppercase mr-2">{post.tags}</span>
+                                            <span className="text-sm font-light">{format(new Date(post.date), "MMMM dd")}</span>
+                                            <h3 className="mt-1 font-bold leading-snug">{post.title}</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </Link>
+                        ))}
                     </div>
                     <div className="flex mt-4">
-                        <button className="ml-auto px-4 h-12 lcl-button">All posts <span className="ml-2"><FaArrowRight/></span></button>
+                        <Link href="/blog"><a className="ml-auto px-4 h-12 lcl-button">All posts <span className="ml-2"><FaArrowRight/></span></a></Link>
                     </div>
                 </TwoCol>
             </div>
             <LanderCTA/>
         </>
     )
+}
+
+export async function getStaticProps() {
+    const posts = ((context) => {
+        let keys = context.keys();
+        if (keys.length >= 3) keys = keys.slice(0, 3);
+        const values = keys.map(context);
+        const data = keys.map((key, index) => {
+            let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3);
+            const value: any = values[index];
+            const document = matter(value.default);
+            return {
+                title: document.data.title,
+                date: document.data.date.toString(),
+                tags: document.data.tags || null,
+                thumbnail: document.data.thumbnail || null,
+                slug
+            };
+        });
+        return data;
+    })(require.context("../content/blog", true, /\.md$/));
+
+    return {props: {posts}};
 }

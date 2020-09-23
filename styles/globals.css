@@ -23,6 +23,12 @@ b {
 .content > p:not(:last-child) {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    @apply leading-relaxed;
+}
+
+.content > pre {
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 .opacity-25, .opacity-50, .opacity-75, .opacity-100 {
@@ -160,7 +166,7 @@ div.lcl-faq:last-of-type .lcl-faq-q, div.lcl-faq:last-of-type .lcl-faq-a{
     @apply rounded-b-lg;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .lcl-navbar-menu{
         @apply fixed top-0 w-64 h-full bg-white flex-col justify-center text-xl;
         transition: right 0.2s ease;

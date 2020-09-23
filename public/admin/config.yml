@@ -91,3 +91,14 @@ collections:
                 widget: list
                 fields:
                   - { name: headshot, label: Headshot, widget: image }
+  - name: blog
+    label: Blog Posts
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string"}
+      - { label: "Tags", name: "tags", widget: "string"}
+      - { label: "Date", name: "date", widget: "datetime"}
+      - { label: "Body", name: "body", widget: "markdown"}
+      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }

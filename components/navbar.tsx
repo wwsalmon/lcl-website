@@ -23,9 +23,10 @@ export default function Navbar() {
                             <Link href="/companies"><a className="mr-4">Companies</a></Link>
                             <Link href="/people"><a className="mr-4">People</a></Link>
                             <Link href="/about#sponsors"><a className="mr-4">Sponsors</a></Link>
+                            <Link href="/blog"><a className="mr-4">Blog</a></Link>
                         </div>
-                        <Link href="/apply"><a className="mr-4 ml-auto sm:mr-0 sm:ml-0 z-20 font-bold lcl-blue">Apply <span className="hidden inline-xs">for Summer '21</span></a></Link>
-                        <button className="sm:hidden z-20" onClick={() => setMenuOpen(!menuOpen)}><FaBars/></button>
+                        <Link href="/apply"><a className="mr-4 ml-auto md:mr-0 md:ml-0 z-20 font-bold lcl-blue">Apply <span className="hidden inline-xs">for Summer '21</span></a></Link>
+                        <button className="md:hidden z-20" onClick={() => setMenuOpen(!menuOpen)}><FaBars/></button>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ export default function TwoCol({children, label, mobileLabel, className, id, dar
     }
 ) {
     return (
-        <div className={`lg:flex lcl-container ${className}`} id={id}>
+        <div className={`lg:flex lcl-container ${className ? className : ""}`} id={id}>
             <div className="lg:w-24 flex-shrink-0">
                 <div className={`${mobileLabel ? "mb-8 lg:mb-0" : "hidden lg:block"}`}>
                     {label === "logo" ? (
@@ -21,7 +21,7 @@ export default function TwoCol({children, label, mobileLabel, className, id, dar
                     )}
                 </div>
             </div>
-            <div className="flex-grow">
+            <div style={{minWidth: 0}}>
                 {children}
             </div>
         </div>
