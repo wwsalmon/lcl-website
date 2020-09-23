@@ -36,7 +36,7 @@ export default function LanderGrid(){
                 </div>
             ))}
             <Link href="/companies">
-                <a className="lcl-rounded-rect flex items-center justify-center opacity-50 hover:opacity-100 font-bold h-24">
+                <a className="lcl-button h-24 lcl-button-heavier">
                     See all companies <span className="ml-2"><FaArrowRight/></span>
                 </a>
             </Link>

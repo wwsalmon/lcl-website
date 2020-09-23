@@ -1,6 +1,7 @@
 import {years} from "../content/companies.json";
 import TwoCol from "../components/twocol";
 import SEOBlock from "../components/seo-block";
+import LanderCTA from "../components/lander-cta";
 
 export default function Companies() {
     return (
@@ -50,6 +51,7 @@ export default function Companies() {
                    </TwoCol>
                 ))}
             </div>
+            <LanderCTA/>
         </>
     )
 }

@@ -127,6 +127,23 @@ b {
     background-color: rgba(255,255,255,0.4);
 }
 
+.lcl-dark-rect{
+    background-color: rgba(0,0,0,0.05);
+}
+
+.lcl-button{
+    @apply rounded-lg font-bold opacity-25 flex items-center justify-center;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.lcl-button-heavier{
+    @apply opacity-50;
+}
+
+.lcl-button:hover{
+    @apply opacity-100;
+}
+
 .lcl-faq{
     border-bottom: 1px solid rgba(255,255,255,0.5);
 }
@@ -158,6 +175,10 @@ div.lcl-faq:last-of-type .lcl-faq-q, div.lcl-faq:last-of-type .lcl-faq-a{
 @media (min-width: 400px){
     .inline-xs{
         display: inline;
+    }
+
+    .ml-auto-xs{
+        @apply ml-auto;
     }
 }
 

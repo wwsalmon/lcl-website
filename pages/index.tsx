@@ -1,8 +1,6 @@
 import TwoCol from "../components/twocol";
 import LanderGrid from "../components/lander-grid";
 import LanderCTA from "../components/lander-cta";
-import Accordion from "react-robust-accordion";
-import {application, accelerator} from "../content/faq.json";
 import {speakers, mentors} from "../content/people.json";
 import Link from "next/link";
 import {FaArrowRight} from "react-icons/fa";
@@ -16,16 +14,15 @@ export default function Home() {
                 <TwoCol label="logo" className="py-8 border-b">
                     <div className="md:flex">
                         <div className="md:w-1/2 md:pr-10">
-                            <h1 className="font-light leading-snug" style={{fontSize: "1.7rem"}}>Life Changing Labs is the startup accelerator and mentorship program for the <b>top 5% of university entrepreneurs worldwide.</b></h1>
+                            <h1 className="font-light leading-snug" style={{fontSize: "1.7rem"}}>Life Changing Labs is the startup accelerator and mentorship program for the <b>top 5% of university entrepreneurs worldwide</b>.<hr className="invisible my-3"/>For 0% equity.</h1>
                             <div className="my-6">
                                 <Link href="/apply"><a className="opacity-75 hover:opacity-100 border-b my-1 inline-block">Apply for summer '21 session</a></Link><br/>
-                                <Link href="#faqs"><a className="opacity-75 hover:opacity-100 border-b my-1 inline-block">Application FAQs</a></Link><br/>
+                                <Link href="/apply#faqs"><a className="opacity-75 hover:opacity-100 border-b my-1 inline-block">Application FAQs</a></Link><br/>
                                 <Link href="#howitworks"><a className="opacity-75 hover:opacity-100 border-b my-1 inline-block">How the program works</a></Link><br/>
                             </div>
                         </div>
                         <div className="md:w-1/2 mt-8 md:mt-0">
                             <img src="/img/lander1.jpg" alt="Screenshot from LCL session"/>
-                            <p className="my-6 opacity-75">Not in university yet? Start your entrepreneurial journey with <a href="https://lifechangingschool.org" className="opacity-75 hover:opacity-100 border-b">Life Changing School.</a></p>
                         </div>
                     </div>
                 </TwoCol>
@@ -67,7 +64,7 @@ export default function Home() {
                             </div>
                         ))}
                         <Link href="/people#mentors">
-                            <a className="lcl-rounded-rect flex items-center justify-center opacity-25 hover:opacity-100 font-bold h-32">
+                            <a className="lcl-button h-32">
                                 See all mentors <span className="ml-2"><FaArrowRight/></span>
                             </a>
                         </Link>
@@ -84,55 +81,15 @@ export default function Home() {
                             </div>
                         ))}
                         <Link href="/people#speakers">
-                            <a className="lcl-rounded-rect flex items-center justify-center opacity-25 hover:opacity-100 font-bold h-32">
+                            <a className="lcl-button h-32">
                                 See all speakers <span className="ml-2"><FaArrowRight/></span>
                             </a>
                         </Link>
                     </div>
                 </TwoCol>
-            </div>
-            <LanderCTA/>
-            <div className="w-full lcl-bg-red py-12" id="faqs">
-                <TwoCol label="logo">
-                    <h2 className="mb-12 text-xl">Frequently asked questions:</h2>
-                    <div>
-                        <h3 className="lcl-bold-uppercase mb-8">Application</h3>
-                        {application.map(q => (
-                            <div className="lcl-faq">
-                                <Accordion label={(
-                                    <div className="lcl-faq-q lcl-white-rect p-4">{q.question}</div>
-                                )}>
-                                    <div className="lcl-faq-a lcl-white-rect p-4 opacity-75 leading-relaxed">
-                                        {q.answer.split("\n").map(x => (
-                                            <p className="my-2">{x}</p>
-                                        ))}
-                                    </div>
-                                </Accordion>
-                            </div>
-                        ))}
-                    </div>
-                    <div>
-                        <h3 className="lcl-bold-uppercase mt-12 mb-8">The LCL Accelerator</h3>
-                        {accelerator.map(q => (
-                            <div className="lcl-faq">
-                                <Accordion label={(
-                                    <div className="lcl-faq-q lcl-white-rect p-4">{q.question}</div>
-                                )}>
-                                    <div className="lcl-faq-a lcl-white-rect p-4 opacity-75 leading-relaxed">
-                                        {q.answer.split("\n").map(x => (
-                                            <p className="my-2">{x}</p>
-                                        ))}
-                                    </div>
-                                </Accordion>
-                            </div>
-                        ))}
-                    </div>
-                </TwoCol>
-            </div>
-            <div className="w-full lcl-bg-gray py-12">
-                <TwoCol label="logo">
+                <TwoCol label="logo" className="py-12 border-t border-b mt-12">
                     <h2 className="lcl-bold-uppercase">The latest from LCL</h2>
-                    <div className="grid grid-cols-3 gap-6 text-black mt-8">
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 text-black mt-8">
                         <div className="bg-white rounded-lg">
                             <div className="w-full h-12 lcl-bg-red rounded-t-lg"></div>
                             <div className="p-4">
@@ -142,8 +99,12 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                    <div className="flex mt-4">
+                        <button className="ml-auto px-4 h-12 lcl-button">All posts <span className="ml-2"><FaArrowRight/></span></button>
+                    </div>
                 </TwoCol>
             </div>
+            <LanderCTA/>
         </>
     )
 }

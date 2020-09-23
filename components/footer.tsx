@@ -19,6 +19,9 @@ export default function Footer(){
                     </div>
                 </div>
             </TwoCol>
+            <TwoCol label="LCS" className="my-8 opacity-75">
+                <p>Not in university yet? Start your entrepreneurial journey with <a href="https://lifechangingschool.org" className="opacity-75 hover:opacity-100 border-b">Life Changing School.</a></p>
+            </TwoCol>
         </div>
     )
 }

@@ -2,6 +2,7 @@ import TwoCol from "../components/twocol";
 import {speakers, mentors, team} from "../content/people.json";
 import PeopleGrid from "../components/people-grid";
 import SEOBlock from "../components/seo-block";
+import LanderCTA from "../components/lander-cta";
 
 export default function People() {
     return (
@@ -32,6 +33,7 @@ export default function People() {
                     <PeopleGrid data={mentors}/>
                 </TwoCol>
             </div>
+            <LanderCTA/>
         </>
     )
 }

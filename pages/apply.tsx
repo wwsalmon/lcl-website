@@ -1,6 +1,8 @@
 import TwoCol from "../components/twocol";
-import Link from "next/link";
 import SEOBlock from "../components/seo-block";
+import {accelerator, application} from "../content/faq.json";
+import Accordion from "react-robust-accordion";
+import LanderCTA from "../components/lander-cta";
 
 export default function Apply(){
     return (
@@ -45,19 +47,42 @@ export default function Apply(){
                     <p>What’s most important is your potential to disrupt the status quo and make a significant difference. </p>
                 </div>
             </TwoCol>
-            <TwoCol label="logo" dark={true} className="py-12 border-t">
-                <h2 className="lcl-bold-uppercase mb-8">Application Criteria</h2>
-                <div className="content">
-                    <p>Our startup accelerator class draws from the top 7% of university entrepreneurs nationally and internationally. </p>
-                    <p className="font-bold">If you are serious about your venture and actively working on its development, we are interested in you. </p>
-                    <p>We consider companies at various stages, but what we are looking for is a combination of entrepreneurial spark and emotional intelligence. Ideally, you have at least one (or more) co-founders that have been with you since the beginning. </p>
-                    <p>We are open to any kind of idea, from software to social entrepreneurship.</p>
-                    <p>What’s most important is your potential to disrupt the status quo and make a significant difference. </p>
+            <TwoCol label="logo" dark={true} className="py-12 border-t" id="faqs">
+                <h2 className="text-xl mb-12">Frequently asked questions</h2>
+                <div>
+                    <h3 className="lcl-bold-uppercase mb-8">Application</h3>
+                    {application.map(q => (
+                        <div className="lcl-faq">
+                            <Accordion label={(
+                                <div className="lcl-faq-q lcl-dark-rect p-4">{q.question}</div>
+                            )}>
+                                <div className="lcl-faq-a lcl-dark-rect p-4 opacity-75 leading-relaxed">
+                                    {q.answer.split("\n").map(x => (
+                                        <p className="my-2">{x}</p>
+                                    ))}
+                                </div>
+                            </Accordion>
+                        </div>
+                    ))}
+                </div>
+                <div>
+                    <h3 className="lcl-bold-uppercase mt-12 mb-8">The LCL Accelerator</h3>
+                    {accelerator.map(q => (
+                        <div className="lcl-faq">
+                            <Accordion label={(
+                                <div className="lcl-faq-q lcl-dark-rect p-4">{q.question}</div>
+                            )}>
+                                <div className="lcl-faq-a lcl-dark-rect p-4 opacity-75 leading-relaxed">
+                                    {q.answer.split("\n").map(x => (
+                                        <p className="my-2">{x}</p>
+                                    ))}
+                                </div>
+                            </Accordion>
+                        </div>
+                    ))}
                 </div>
             </TwoCol>
-            <TwoCol label="logo" dark={true} className="py-12 border-t">
-                <p className="content">Read our <Link href="/#faqs"><a>frequently asked questions.</a></Link></p>
-            </TwoCol>
+            <LanderCTA/>
         </>
     )
 }
