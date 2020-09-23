@@ -129,6 +129,21 @@ export default function Home() {
                     </div>
                 </TwoCol>
             </div>
+            <div className="w-full lcl-bg-gray py-12">
+                <TwoCol label="logo">
+                    <h2 className="lcl-bold-uppercase">The latest from LCL</h2>
+                    <div className="grid grid-cols-3 gap-6 text-black mt-8">
+                        <div className="bg-white rounded-lg">
+                            <div className="w-full h-12 lcl-bg-red rounded-t-lg"></div>
+                            <div className="p-4">
+                                <span className="lcl-bold-uppercase mr-2">News</span>
+                                <span className="text-sm font-light">September 23</span>
+                                <h3 className="mt-1 font-bold leading-snug">Here is an excellent title for this blog post</h3>
+                            </div>
+                        </div>
+                    </div>
+                </TwoCol>
+            </div>
         </>
     )
 }
