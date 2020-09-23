@@ -1,10 +1,12 @@
 import TwoCol from "../components/twocol";
 import {speakers, mentors, team} from "../content/people.json";
 import PeopleGrid from "../components/people-grid";
+import SEOBlock from "../components/seo-block";
 
 export default function People() {
     return (
         <>
+            <SEOBlock title="People"/>
             <div className="w-full lcl-grad-3-sideways py-1">
                 <TwoCol label="">
                     <h1 className="text-4xl font-light mb-8 mt-16">People</h1>

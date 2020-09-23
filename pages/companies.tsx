@@ -1,9 +1,11 @@
 import {years} from "../content/companies.json";
 import TwoCol from "../components/twocol";
+import SEOBlock from "../components/seo-block";
 
 export default function Companies() {
     return (
         <>
+            <SEOBlock title="Companies"/>
             <div className="w-full lcl-grad-3-sideways py-1">
                 <TwoCol label="">
                     <h1 className="text-4xl font-light mb-8 mt-16">Companies</h1>

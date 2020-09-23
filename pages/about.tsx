@@ -1,4 +1,5 @@
 import TwoCol from "../components/twocol";
+import SEOBlock from "../components/seo-block";
 
 export default function About(){
     const sponsors = [
@@ -28,6 +29,7 @@ export default function About(){
 
     return (
         <>
+            <SEOBlock title="About LCL"/>
             <div className="w-full lcl-grad-1-sideways pt-16 pb-8">
                 <TwoCol label="">
                     <h1 className="lcl-bold-uppercase mb-4">About</h1>

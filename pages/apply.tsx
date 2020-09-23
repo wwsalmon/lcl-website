@@ -1,9 +1,11 @@
 import TwoCol from "../components/twocol";
 import Link from "next/link";
+import SEOBlock from "../components/seo-block";
 
 export default function Apply(){
     return (
         <>
+            <SEOBlock title="Apply to LCL"/>
             <div className="w-full lcl-grad-1-sideways pt-16 pb-8">
                 <TwoCol label="">
                     <h1 className="font-light text-4xl leading-tight">Apply to Life Changing Labs</h1>
