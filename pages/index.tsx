@@ -15,11 +15,6 @@ export default function Home() {
                     <div className="md:flex">
                         <div className="md:w-1/2 md:pr-10">
                             <h1 className="font-light leading-snug" style={{fontSize: "1.7rem"}}>Life Changing Labs is the startup accelerator and mentorship program for the <b>top 5% of university entrepreneurs worldwide</b>.<hr className="invisible my-3"/>For 0% equity.</h1>
-                            <div className="my-6">
-                                <Link href="/apply"><a className="opacity-75 hover:opacity-100 border-b my-1 inline-block">Apply for summer '21 session</a></Link><br/>
-                                <Link href="/apply#faqs"><a className="opacity-75 hover:opacity-100 border-b my-1 inline-block">Application FAQs</a></Link><br/>
-                                <Link href="#howitworks"><a className="opacity-75 hover:opacity-100 border-b my-1 inline-block">How the program works</a></Link><br/>
-                            </div>
                         </div>
                         <div className="md:w-1/2 mt-8 md:mt-0">
                             <img src="/img/lander1.jpg" alt="Screenshot from LCL session"/>
