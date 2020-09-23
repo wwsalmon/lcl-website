@@ -86,3 +86,8 @@ collections:
               - { name: name, label: Name, widget: string }
               - { name: class, label: Class, widget: string }
               - { name: message, label: Message, widget: text }
+              - name: headshots
+                label: Headshots
+                widget: list
+                fields:
+                  - { name: headshot, label: Headshot, widget: image }

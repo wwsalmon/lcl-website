@@ -52,6 +52,13 @@ export default function About(){
                     <h3 className="lcl-bold-uppercase mb-8">Hear from our founders</h3>
                     {testimonials.map(x => (
                         <div className="my-12">
+                            {x.headshots && (
+                                <div className="flex mb-4">
+                                    {x.headshots.map(h => (
+                                        <img src={h.headshot} alt={`Headshot of ${x.name}`} className="w-20 rounded-full mr-4"/>
+                                    ))}
+                                </div>
+                            )}
                             <h4 className="font-bold text-xl mb-4">{x.name} <span className="font-light">{x.class}</span></h4>
                             <p className="leading-relaxed">{x.message}</p>
                         </div>

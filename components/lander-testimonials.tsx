@@ -15,6 +15,11 @@ export default function LanderTestimonials({className}: {className?: string}){
     return (
         <div className={className}>
             <div className="lcl-rounded-rect p-4">
+                <div className="flex">
+                    {testimonials[currIndex].headshots && testimonials[currIndex].headshots.map(x => (
+                        <img src={x.headshot} alt={`Headshot of ${testimonials[currIndex].name}`} className="w-20 rounded-full mr-4"/>
+                    ))}
+                </div>
                 <p className="font-bold text-xl my-4">
                     <span className="mr-2">{testimonials[currIndex].name}</span>
                     <span className="font-light">{testimonials[currIndex].class}</span>
