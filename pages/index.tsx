@@ -2,7 +2,7 @@ import TwoCol from "../components/twocol";
 import LanderGrid from "../components/lander-grid";
 import LanderCTA from "../components/lander-cta";
 import Accordion from "react-robust-accordion";
-import {application} from "../content/faq.json";
+import {application, accelerator} from "../content/faq.json";
 import {speakers, mentors} from "../content/people.json";
 import Link from "next/link";
 import {FaArrowRight} from "react-icons/fa";
@@ -95,16 +95,38 @@ export default function Home() {
             <div className="w-full lcl-bg-red py-12" id="faqs">
                 <TwoCol label="logo">
                     <h2 className="mb-12 text-xl">Frequently asked questions:</h2>
-                    <h3 className="lcl-bold-uppercase mb-8">Application</h3>
-                    {application.map(q => (
-                        <div className="lcl-faq">
-                            <Accordion label={(
-                                <div className="lcl-faq-q lcl-white-rect p-4">{q.question}</div>
-                            )}>
-                                <div className="lcl-faq-a lcl-white-rect p-4 opacity-75">{q.answer}</div>
-                            </Accordion>
-                        </div>
-                    ))}
+                    <div>
+                        <h3 className="lcl-bold-uppercase mb-8">Application</h3>
+                        {application.map(q => (
+                            <div className="lcl-faq">
+                                <Accordion label={(
+                                    <div className="lcl-faq-q lcl-white-rect p-4">{q.question}</div>
+                                )}>
+                                    <div className="lcl-faq-a lcl-white-rect p-4 opacity-75 leading-relaxed">
+                                        {q.answer.split("\n").map(x => (
+                                            <p className="my-2">{x}</p>
+                                        ))}
+                                    </div>
+                                </Accordion>
+                            </div>
+                        ))}
+                    </div>
+                    <div>
+                        <h3 className="lcl-bold-uppercase mt-12 mb-8">The LCL Accelerator</h3>
+                        {accelerator.map(q => (
+                            <div className="lcl-faq">
+                                <Accordion label={(
+                                    <div className="lcl-faq-q lcl-white-rect p-4">{q.question}</div>
+                                )}>
+                                    <div className="lcl-faq-a lcl-white-rect p-4 opacity-75 leading-relaxed">
+                                        {q.answer.split("\n").map(x => (
+                                            <p className="my-2">{x}</p>
+                                        ))}
+                                    </div>
+                                </Accordion>
+                            </div>
+                        ))}
+                    </div>
                 </TwoCol>
             </div>
         </>

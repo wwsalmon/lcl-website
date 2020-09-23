@@ -1,0 +1,88 @@
+backend:
+  name: git-gateway
+  branch: master
+local_backend: true
+media_folder: /public/img/uploads
+public_folder: /img/uploads
+collections:
+  - name: faqCol
+    label: FAQs
+    files:
+      - name: faq
+        label: FAQs
+        file: content/faq.json
+        fields:
+          - name: application
+            label: Application questions
+            widget: list
+            fields:
+              - { name: question, label: Question, widget: string }
+              - { name: answer, label: Answer, widget: text }
+          - name: accelerator
+            label: LCL Accelerator questions
+            widget: list
+            fields:
+              - { name: question, label: Question, widget: string }
+              - { name: answer, label: Answer, widget: text }
+  - name: peopleCol
+    label: People
+    files:
+      - name: people
+        label: People
+        file: content/people.json
+        fields:
+          - name: speakers
+            label: Speakers
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: label, label: Label, widget: string }
+              - { name: headshot, label: Headshot, widget: image }
+          - name: mentors
+            label: Mentors
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: label, label: Label, widget: string }
+              - { name: headshot, label: Headshot, widget: image }
+          - name: team
+            label: Team
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: label, label: Label, widget: string }
+              - { name: headshot, label: Headshot, widget: image }
+  - name: companiesCol
+    label: Companies
+    files:
+      - name: companies
+        label: Companies
+        file: content/companies.json
+        fields:
+          - name: years
+            label: Years
+            widget: list
+            fields:
+              - { name: year, label: Year, widget: string }
+              - name: companies
+                label: Companies
+                widget: list
+                fields:
+                  - { name: name, label: Name, widget: string }
+                  - { name: place, label: Place, widget: string, required: false }
+                  - { name: descript, label: Description, widget: string, required: false }
+                  - { name: logo, label: Logo, widget: image }
+  - name: testimonialsCol
+    label: Testimonials
+    files:
+      - name: testimonials
+        label: Testimonials
+        file: content/testimonials.json
+        fields:
+          - name: testimonials
+            label: Testimonials
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: class, label: Class, widget: string }
+              - { name: message, label: Message, widget: text }
