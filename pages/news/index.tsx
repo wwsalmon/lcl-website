@@ -7,7 +7,7 @@ import SEOBlock from "../../components/seo-block";
 export default function News({posts}){
     return (
         <>
-            <SEOBlock title="Blog"/>
+            <SEOBlock title="News"/>
             <div className="w-full lcl-grad-1-sideways pt-16 pb-8">
                 <TwoCol label="">
                     <h1 className="lcl-bold-uppercase mb-4">News</h1>

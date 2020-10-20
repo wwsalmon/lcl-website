@@ -16,6 +16,10 @@ b {
     @apply font-bold;
 }
 
+svg {
+    display: unset;
+}
+
 .content > p:not(:first-child) {
     margin-top: 1rem;
     margin-bottom: 1rem;
