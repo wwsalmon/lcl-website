@@ -16,11 +16,7 @@ b {
     @apply font-bold;
 }
 
-.content {
-    font-size: 1.25rem;
-}
-
-.content > p:not(:last-child) {
+.content > p:not(:first-child) {
     margin-top: 1rem;
     margin-bottom: 1rem;
     @apply leading-relaxed;
@@ -61,6 +57,16 @@ b {
 
 .lcl-bg-red{
     background-color: var(--lcl-red);
+    color: #fff;
+}
+
+.lcl-bg-blue{
+    background-color: var(--lcl-blue);
+    color: #fff;
+}
+
+.lcl-bg-teal{
+    background-color: var(--lcl-teal);
     color: #fff;
 }
 
@@ -138,12 +144,8 @@ b {
 }
 
 .lcl-button{
-    @apply rounded-lg font-bold opacity-25 flex items-center justify-center;
+    @apply rounded-lg font-bold opacity-50 flex items-center justify-center;
     background-color: rgba(255,255,255,0.2);
-}
-
-.lcl-button-heavier{
-    @apply opacity-50;
 }
 
 .lcl-button:hover{

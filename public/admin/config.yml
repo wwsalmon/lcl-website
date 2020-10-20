@@ -5,8 +5,8 @@ local_backend: true
 media_folder: /public/img/uploads
 public_folder: /img/uploads
 collections:
-  - name: faqCol
-    label: FAQs
+  - name: crossPageData
+    label: FAQ and Testimonials
     files:
       - name: faq
         label: FAQs
@@ -24,8 +24,24 @@ collections:
             fields:
               - { name: question, label: Question, widget: string }
               - { name: answer, label: Answer, widget: text }
-  - name: peopleCol
-    label: People
+      - name: testimonials
+        label: Testimonials
+        file: content/testimonials.json
+        fields:
+          - name: testimonials
+            label: Testimonials
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: class, label: Class, widget: string }
+              - { name: message, label: Message, widget: text }
+              - name: headshots
+                label: Headshots
+                widget: list
+                fields:
+                  - { name: headshot, label: Headshot, widget: image }
+  - name: peopleAndCo
+    label: People and Companies
     files:
       - name: people
         label: People
@@ -45,16 +61,27 @@ collections:
               - { name: name, label: Name, widget: string }
               - { name: label, label: Label, widget: string }
               - { name: headshot, label: Headshot, widget: image }
-          - name: team
-            label: Team
+          - name: summerAccelerator
+            label: Summer Accelerator Team
             widget: list
             fields:
               - { name: name, label: Name, widget: string }
               - { name: label, label: Label, widget: string }
               - { name: headshot, label: Headshot, widget: image }
-  - name: companiesCol
-    label: Companies
-    files:
+          - name: boardMembers
+            label: Board Members
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: label, label: Label, widget: string }
+              - { name: headshot, label: Headshot, widget: image }
+          - name: pastLeadership
+            label: Past Leadership
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: label, label: Label, widget: string }
+              - { name: headshot, label: Headshot, widget: image }
       - name: companies
         label: Companies
         file: content/companies.json
@@ -72,28 +99,65 @@ collections:
                   - { name: place, label: Place, widget: string, required: false }
                   - { name: descript, label: Description, widget: string, required: false }
                   - { name: logo, label: Logo, widget: image }
-  - name: testimonialsCol
-    label: Testimonials
+  - name: pageContent
+    label: Page Content
     files:
-      - name: testimonials
-        label: Testimonials
-        file: content/testimonials.json
+      - name: about
+        label: About
+        file: content/pages/about.json
         fields:
-          - name: testimonials
-            label: Testimonials
+          - name: sections
+            label: Page Sections
             widget: list
             fields:
-              - { name: name, label: Name, widget: string }
-              - { name: class, label: Class, widget: string }
-              - { name: message, label: Message, widget: text }
-              - name: headshots
-                label: Headshots
-                widget: list
-                fields:
-                  - { name: headshot, label: Headshot, widget: image }
-  - name: blog
-    label: Blog Posts
-    folder: "content/blog"
+              - { name: heading, label: Heading, widget: string }
+              - { name: content, label: Content, widget: markdown }
+      - name: team
+        label: Team
+        file: content/pages/team.json
+        fields:
+          - { name: text, label: Header text, widget: markdown }
+      - name: people
+        label: People
+        file: content/pages/people.json
+        fields:
+          - { name: text, label: Header text, widget: markdown }
+      - name: cohorts
+        label: Cohorts
+        file: content/pages/cohorts.json
+        fields:
+          - name: stats
+            label: Header statistics
+            widget: list
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: value, label: Value, widget: string }
+      - name: apply
+        label: Apply
+        file: content/pages/apply.json
+        fields:
+          - name: sections
+            label: Page Sections
+            widget: list
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: content, label: Content, widget: markdown }
+  - name: navbar
+    label: Navbar Items
+    files:
+      - name: navbar
+        label: Navbar Items
+        file: content/navbar.json
+        fields:
+          - name: items
+            label: Navbar Items
+            widget: list
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: link, label: Link, widget: string }
+  - name: news
+    label: News Posts
+    folder: "content/news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields:

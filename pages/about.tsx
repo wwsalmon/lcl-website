@@ -1,6 +1,9 @@
 import TwoCol from "../components/twocol";
 import SEOBlock from "../components/seo-block";
-import {testimonials} from "../content/testimonials.json";
+import PeopleGrid from "../components/people-grid";
+import {sections} from "../content/pages/about.json";
+import {summerAccelerator} from "../content/people.json";
+import ReactMarkdown from 'react-markdown';
 
 export default function About(){
     const sponsors = [
@@ -26,7 +29,7 @@ export default function About(){
         "orson.jpg",
         "braintree.png",
         "startuptree.png"
-    ]
+    ];
 
     return (
         <>
@@ -38,44 +41,32 @@ export default function About(){
                 </TwoCol>
             </div>
             <div>
-                <TwoCol label={<>Who <br className="hidden lg:block"/>we <br className="hidden lg:block"/>are</>} mobileLabel={true} className="my-12">
-                    <p className="text-xl">
-                        Life Changing Labs was founded in 2012 by Peter Cortle to give a platform and a network for entrepreneurs at Cornell who needed a community as they developed their ventures.
-                        <br/><br/>
-                        After years of being the premier summer accelerator for student startups at Cornell, we have since expanded our mission to being a startup accelerator and elite network for top university entrepreneurs globally.
-                    </p>
+                {sections.map(d => (
+                    <>
+                        <TwoCol label="" className="mt-6 mb-4">
+                            <h2 className="lcl-bold-uppercase">{d.heading}</h2>
+                        </TwoCol>
+                        <TwoCol label="logo" dark={true} className="mb-6 pb-6 border-b">
+                            <div className="content">
+                                <ReactMarkdown source={d.content}/>
+                            </div>
+                        </TwoCol>
+                    </>
+                ))}
+                <TwoCol label="Our Team" id="team" className="my-6 pb-6 border-b" mobileLabel={true}>
+                    <PeopleGrid data={summerAccelerator}/>
                 </TwoCol>
-                <TwoCol label={<>Our <br className="hidden lg:block"/>Philo<br className="hidden lg:block"/>sophy</>} className="my-12 py-12 border-t" mobileLabel={true}>
-                    <p className="text-xl">We believe that the success of a company hinges on the growth of the people involved and the relationships that make up the team.</p>
-                </TwoCol>
-                <TwoCol label="logo" dark={true} className="my-12 py-12 border-t" id="testimonials">
-                    <h3 className="lcl-bold-uppercase mb-8">Hear from our founders</h3>
-                    {testimonials.map(x => (
-                        <div className="my-12">
-                            {x.headshots && (
-                                <div className="flex mb-4">
-                                    {x.headshots.map(h => (
-                                        <img src={h.headshot} alt={`Headshot of ${x.name}`} className="w-20 rounded-full mr-4"/>
-                                    ))}
-                                </div>
-                            )}
-                            <h4 className="font-bold text-xl mb-4">{x.name} <span className="font-light">{x.class}</span></h4>
-                            <p className="leading-relaxed">{x.message}</p>
-                        </div>
-                    ))}
-                </TwoCol>
-                <TwoCol label="logo" dark={true} className="my-12 py-12 border-t" id="sponsors">
-                    <h3 className="lcl-bold-uppercase mb-8">Sponsors</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                <TwoCol label="Sponsors" mobileLabel={true} className="my-6" id="sponsors">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-12">
                         {sponsors.map(x => (
                             <div className="flex items-center h-32">
                                 <img src={`/img/sponsors/${x}`} alt="Logo of sponsor"/>
                             </div>
                         ))}
                     </div>
-                    <hr className="my-12"/>
-                    <h3 className="lcl-bold-uppercase mb-8">Resource providers</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+                    <hr className="my-8"/>
+                    <h3 className="lcl-bold-uppercase mb-6">Resource providers</h3>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                         {partners.map(x => (
                             <div className="flex items-center h-32">
                                 <img src={`/img/sponsors/${x}`} alt="Logo of sponsor"/>

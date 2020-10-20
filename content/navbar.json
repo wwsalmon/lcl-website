@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "label": "About",
+      "link": "/about"
+    },
+    {
+      "label": "Cohorts",
+      "link": "/cohorts"
+    },
+    {
+      "label": "People",
+      "link": "/people"
+    },
+    {
+      "label": "Team",
+      "link": "/team"
+    },
+    {
+      "label": "Calendar",
+      "link": "/calendar"
+    },
+    {
+      "label": "News",
+      "link": "/news"
+    }
+  ]
+}
