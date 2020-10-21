@@ -2,27 +2,33 @@
   "items": [
     {
       "label": "About",
-      "link": "/about"
+      "link": "/about",
+      "subitems": [
+        {
+          "label": "Team",
+          "link": "/team"
+        }
+      ]
     },
     {
-      "label": "Cohorts",
-      "link": "/cohorts"
+      "label": "Companies",
+      "link": "/companies",
+      "subitems": []
     },
     {
       "label": "People",
-      "link": "/people"
-    },
-    {
-      "label": "Team",
-      "link": "/team"
+      "link": "/people",
+      "subitems": []
     },
     {
       "label": "Calendar",
-      "link": "/calendar"
+      "link": "/calendar",
+      "subitems": []
     },
     {
       "label": "News",
-      "link": "/news"
+      "link": "/news",
+      "subitems": []
     }
   ]
 }

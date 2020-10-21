@@ -4,13 +4,13 @@ import SEOBlock from "../components/seo-block";
 import LanderCTA from "../components/lander-cta";
 import {stats} from "../content/pages/cohorts.json";
 
-export default function Cohorts() {
+export default function Companies() {
     return (
         <>
-            <SEOBlock title="Cohorts"/>
+            <SEOBlock title="Companies"/>
             <div className="w-full lcl-grad-3-sideways py-1">
                 <TwoCol label="">
-                    <h1 className="text-4xl font-light mb-8 mt-16">Cohorts</h1>
+                    <h1 className="text-4xl font-light mb-8 mt-16">Companies</h1>
                     <hr/>
                     <div className="sm:flex my-8">
                         {stats.map(d => (

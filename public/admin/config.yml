@@ -155,6 +155,12 @@ collections:
             fields:
               - { name: label, label: Label, widget: string }
               - { name: link, label: Link, widget: string }
+              - name: subitems
+                label: Subitems
+                widget: list
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: link, label: Link, widget: string }
   - name: news
     label: News Posts
     folder: "content/news"
