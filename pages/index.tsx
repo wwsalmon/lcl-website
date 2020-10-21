@@ -36,8 +36,8 @@ export default function Home() {
                     <h2 className="text-xl mb-12">Meet the people who are invested in your success.</h2>
                     <h3 className="lcl-bold-uppercase mt-12 mb-8">Mentors</h3>
                     <div className="grid sm:grid-cols-2 gap-6">
-                        {mentors.map(x => (
-                            <div className="lcl-rounded-rect p-4 flex items-center">
+                        {mentors.map((x, i) => (
+                            <div className="lcl-rounded-rect p-4 flex items-center" key={i}>
                                 <img src={x.headshot} alt={`Headshot of LCL mentor ${x.name}`} className="rounded-full w-20 mr-4"/>
                                 <div>
                                     <h4 className="font-bold">{x.name}</h4>
@@ -57,8 +57,8 @@ export default function Home() {
                 <TwoCol label="">
                     <h3 className="lcl-bold-uppercase mb-8">Speakers</h3>
                     <div className="grid sm:grid-cols-2 gap-6">
-                        {speakers.map(x => (
-                            <div className="lcl-rounded-rect p-4 flex items-center">
+                        {speakers.map((x, i) => (
+                            <div className="lcl-rounded-rect p-4 flex items-center" key={i}>
                                 <img src={x.headshot} alt={`Headshot of LCL mentor ${x.name}`} className="rounded-full w-20 mr-4"/>
                                 <div>
                                     <h4 className="font-bold">{x.name}</h4>
