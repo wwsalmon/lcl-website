@@ -12,22 +12,22 @@ export default function Navbar() {
 
     return (
         <div className="w-full bg-white sticky top-0 z-10">
-            <div className="flex lcl-container h-16 items-center">
-                <div className="pr-4 lg:w-24 flex-shrink-0">
-                    <Link href="/"><a><img src="/logo-new-color.svg" className="relative h-8 z-20" alt="LCL Logo"/></a></Link>
+            <div className="flex lcl-container h-24 items-center">
+                <div className="pr-4 lg:w-23 flex-shrink-0">
+                    <Link href="/"><a><img src="/logo-original.svg" className="relative h-8 z-20" alt="LCL Logo"/></a></Link>
                 </div>
                 <div className="flex-grow h-full">
                     <div className="flex text-black items-center h-full">
-                        <Link href="/"><a className="font-black text-xs leading-none z-20">Life <br/>Changing <br/>Labs </a></Link>
+                        <Link href="/"><a className="logo-header">LIFE CHANGING LABS</a></Link>
                         <div className={`flex items-center ml-auto lcl-navbar-menu h-full z-10 ${menuOpen ? "selected" : ""}`}>
                             {items.map(d => d.subitems.length > 0 ? (
                                 <div className="text-center lcl-navbar-dropdown-outer md:h-full md:flex items-center relative">
                                     <Link href={d.link} key={d.link}><a className="mr-4">{d.label} <span className="hidden md:inline"><FaCaretDown/></span></a></Link>
-                                    <div className="md:absolute md:bg-gray-100 md:p-4 md:-ml-4 md:h-full flex items-center lcl-navbar-dropdown z-0">
+                                    {/* <div className="md:absolute md:bg-gray-100 md:p-4 md:-ml-4 md:h-full flex items-center lcl-navbar-dropdown z-0">
                                         {d.subitems.map(s => (
                                             <Link href={s.link} key={s.link}><a className="mr-4">{s.label}</a></Link>
                                         ))}
-                                    </div>
+                                    </div> */}
                                 </div>
                             ) : (
                                 <Link href={d.link} key={d.link}><a className="mr-4">{d.label}</a></Link>

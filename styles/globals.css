@@ -99,12 +99,17 @@ svg {
 }
 
 .lcl-grad-3{
-    background: linear-gradient(var(--lcl-yellow), var(--lcl-red));
-    color: #fff;
+    background: linear-gradient(var(--lcl-light-yellow), var(--lcl-yellow));
+    color: black;
 }
 
 .lcl-grad-3-sideways{
-    background: linear-gradient(to right, var(--lcl-yellow), var(--lcl-red));
+    background: linear-gradient(to right, var(--lcl-pink), var(--lcl-red));
+    color: #fff;
+}
+
+.lcl-grad-4{
+    background: linear-gradient(var(--lcl-pink), var(--lcl-red));
     color: #fff;
 }
 
@@ -126,7 +131,7 @@ svg {
 
 @media (min-width: 840px){
     .lcl-container{
-        max-width: 800px;
+        max-width: 65%;
     }
 }
 
@@ -170,6 +175,12 @@ div.lcl-faq:last-of-type{
 
 div.lcl-faq:last-of-type .lcl-faq-q, div.lcl-faq:last-of-type .lcl-faq-a{
     @apply rounded-b-lg;
+}
+
+.logo-header {
+    /* font-family: "Lato"; */
+    font-weight: 100;
+    font-size: 135%;
 }
 
 @media (max-width: 768px) {

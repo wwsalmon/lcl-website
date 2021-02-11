@@ -9,7 +9,7 @@ export default function Post({frontmatter, markdownBody}) {
     return (
         <main>
             <SEOBlock title={frontmatter.title}/>
-            <div className={`w-full lcl-bg-red pt-12 ${frontmatter.thumbnail ? "pb-20" : "pb-8"}`}>
+            <div className={`w-full lcl-grad-1-sideways pt-12 ${frontmatter.thumbnail ? "pb-20" : "pb-8"}`}>
                 <TwoCol label="">
                     <p className="lcl-bold-uppercase">{frontmatter.tags}</p>
                     <h1 className="text-4xl font-bold mb-4">{frontmatter.title}</h1>

@@ -11,7 +11,7 @@ export default function CalendarEvent(props: { thumbnail: string, title: string,
         <div className="bg-white rounded-lg shadow-lg">
             <Accordion label={(
                 <div className="sm:flex items-center">
-                    <div className="sm:w-48 flex-shrink-0 h-48 lcl-bg-red rounded-t-lg bg-cover bg-center" style={{
+                    <div className="sm:w-48 flex-shrink-0 h-48 lcl-bg-red rounded-lg bg-cover bg-center" style={{
                         backgroundImage: `url(${props.thumbnail ? props.thumbnail : "/logo-new-white.svg"})`,
                     }}/>
                     <div className="p-4">
