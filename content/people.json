@@ -35,9 +35,24 @@
   ],
   "summerAccelerator": [
     {
+      "name": "Deep Joshi",
+      "label": "Program Coordinator",
+      "headshot": "/img/uploads/deepjoshi.jpeg"
+    },
+    {
       "name": "Jojo Cheng",
-      "label": "Summer Accelerator Team",
+      "label": "Program Director",
       "headshot": "/img/uploads/jojo.jpg"
+    },
+    {
+      "name": "Timmy Zhu",
+      "label": "Managing Director",
+      "headshot": "/img/uploads/timmyzhu.jpg"
+    },
+    {
+      "name": "Pam Silverstein",
+      "label": "Entrepreneur-in-Residence",
+      "headshot": "/img/uploads/pamsilverstein.jpeg"
     }
   ],
   "boardMembers": [

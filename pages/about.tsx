@@ -54,6 +54,7 @@ export default function About(){
                     </>
                 ))}
                 <TwoCol label="Our Team" id="team" className="my-6 pb-6 border-b" mobileLabel={true}>
+                    <h1 className="opacity-50 mb-4">Summer Accelerator</h1>
                     <PeopleGrid data={summerAccelerator}/>
                 </TwoCol>
                 <TwoCol label="Sponsors" mobileLabel={true} className="my-6" id="sponsors">

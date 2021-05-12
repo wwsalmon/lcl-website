@@ -7,6 +7,7 @@ export default function PeopleGrid({data}: {
 }) {
     return (
         <div className="grid sm:grid-cols-2 gap-8">
+            {/* <h1>Summer Accelerator</h1> */}
             {data.map(x => (
                 <div className="flex items-center">
                     <img src={x.headshot} alt={`Headshot of ${x.name}`} className="w-20 h-20 rounded-full mr-4"/>
