@@ -14,6 +14,11 @@
       "name": "Michael Gibson",
       "label": "Founder and General Partner at 1517 Fund",
       "headshot": "/img/uploads/michael.jpg"
+    },
+    {
+      "name": "Adi Agashe",
+      "label": "Product Manager at Microsoft",
+      "headshot": "/img/uploads/adi.jpeg"
     }
   ],
   "mentors": [
@@ -38,11 +43,6 @@
       "name": "Deep Joshi",
       "label": "Program Coordinator",
       "headshot": "/img/uploads/deepjoshi.jpeg"
-    },
-    {
-      "name": "Jojo Cheng",
-      "label": "Program Director",
-      "headshot": "/img/uploads/jojo.jpg"
     },
     {
       "name": "Timmy Zhu",
