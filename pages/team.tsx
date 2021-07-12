@@ -38,7 +38,7 @@ export default function Team() {
                     <PeopleGrid data={pastLeadership}/>
                 </TwoCol>
             </div>
-            <LanderCTA/>
+            {/* <LanderCTA/> */}
         </>
     )
 }

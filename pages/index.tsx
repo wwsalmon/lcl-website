@@ -21,8 +21,8 @@ export default function Home() {
                         </div>
                     </div>
                 </TwoCol>
-            </div>
-            <div className="w-full lcl-grad-2 py-4">
+            {/* </div> */}
+            <div className="w-full py-4">
                 <TwoCol label="">
                     <h2 className="lcl-bold-uppercase">Our impact</h2>
                 </TwoCol>
@@ -31,7 +31,7 @@ export default function Home() {
                     <LanderGrid/>
                 </TwoCol>
             </div>
-            <div className="w-full lcl-bg-red pt-4 pb-8">
+            <div className="w-full pt-4 pb-8">
                 <TwoCol label="logo">
                     <h2 className="text-xl mb-12">Meet the people who are invested in your success.</h2>
                     <h3 className="lcl-bold-uppercase mt-12 mb-8">Mentors</h3>
@@ -52,6 +52,7 @@ export default function Home() {
                         </Link>
                     </div>
                 </TwoCol>
+            </div>
             </div>
             <div className="w-full lcl-bg-blue py-8">
                 <TwoCol label="">

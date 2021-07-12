@@ -5,7 +5,7 @@ import LanderTestimonials from "./lander-testimonials";
 export default function LanderCTA(){
     return (
         <>
-            <div className="w-full lcl-bg-teal">
+            <div className="w-full lcl-grad-4">
                 <TwoCol label="logo" className="py-12">
                     <h2 className="lcl-bold-uppercase mb-8">Hear from our founders</h2>
                     <LanderTestimonials/>

@@ -3,12 +3,7 @@
     {
       "label": "About",
       "link": "/about",
-      "subitems": [
-        {
-          "label": "Team",
-          "link": "/team"
-        }
-      ]
+      "subitems": []
     },
     {
       "label": "Companies",
@@ -16,7 +11,7 @@
       "subitems": []
     },
     {
-      "label": "People",
+      "label": "Network",
       "link": "/people",
       "subitems": []
     },
